@@ -9,13 +9,16 @@ export const darkMode = {
         contrast: '#F65353',
         darkText: '#959595',
         text: '#000',
-        inputBackgroundColor: '#DC7878'
+        inputBackgroundColor: '#DC7878',
+        questionBackgroundColor: '#FFF6F6'
     },
     icons: {
         sm: width * 0.07
     },
     fontSize: {
         md: width * 0.06,
+        xxxsm: width * 0.043,
+        xxsm: width * 0.045,
         xsm: width * 0.05,
         sm: width * 0.035
     },
