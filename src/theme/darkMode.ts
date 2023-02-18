@@ -9,6 +9,7 @@ export const darkMode = {
         contrast: '#F65353',
         darkText: '#959595',
         text: '#000',
+        inputBackgroundColor: '#DC7878'
     },
     icons: {
         sm: width * 0.07
@@ -19,7 +20,8 @@ export const darkMode = {
         sm: width * 0.035
     },
     borderRadius: {
-        full: width
+        full: width,
+        sm: width * 0.08
     },
     vw: width,
     vh: height
