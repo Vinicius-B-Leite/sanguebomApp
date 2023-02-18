@@ -10,10 +10,12 @@ export const darkMode = {
         darkText: '#959595',
         text: '#000',
         inputBackgroundColor: '#DC7878',
-        questionBackgroundColor: '#FFF6F6'
+        questionBackgroundColor: '#FFF6F6',
+        optionsBg: '#FBB1B1'
     },
     icons: {
-        sm: width * 0.07
+        sm: width * 0.07,
+        vsm: width * 0.06,
     },
     fontSize: {
         md: width * 0.06,
