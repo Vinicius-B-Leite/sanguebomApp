@@ -11,9 +11,11 @@ export const darkMode = {
         text: '#000',
         inputBackgroundColor: '#DC7878',
         questionBackgroundColor: '#FFF6F6',
-        optionsBg: '#FBB1B1'
+        optionsBg: '#FBB1B1',
+        formInputBg: '#F0F0F0'
     },
     icons: {
+        big: width * 0.3,
         sm: width * 0.07,
         vsm: width * 0.06,
     },
