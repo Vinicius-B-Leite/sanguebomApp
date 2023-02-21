@@ -5,10 +5,13 @@ import { Entypo } from '@expo/vector-icons';
 import { useTheme } from 'styled-components/native';
 import { AntDesign } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
+import SelectBloodType from '../../components/SelectBloodType';
 
 
 const CreatePost: React.FC = () => {
   const { colors, icons } = useTheme()
+  const [bloodTypeSelected, setBloodTypeSelected] = useState<string[]>(['A+'])
+  const [selectBloodTypeVisible, setSelectBloodTypeVisible] = useState(false)
   const [imageURL, setImageURL] = useState<string | undefined>('https://www.showmetech.com.br/wp-content/uploads//2021/02/capa-dog-1920x1024.jpg')
 
   const handlePickImage = async () => {
@@ -24,6 +27,16 @@ const CreatePost: React.FC = () => {
     }
   };
 
+  const handleSelectBloodType = (bloodType: string) => {
+    if (bloodTypeSelected.includes(bloodType)){
+      let copy = [...bloodTypeSelected]
+      copy.splice(bloodTypeSelected.indexOf(bloodType), 1)
+      setBloodTypeSelected([...copy])
+      return
+    }
+
+    setBloodTypeSelected(old => [...old, bloodType])
+  }
   return (
     <S.Container>
       <S.Header>
@@ -42,7 +55,7 @@ const CreatePost: React.FC = () => {
 
       <S.Form>
         <S.ROw>
-          <S.BloodTypeSelect>
+          <S.BloodTypeSelect onPress={() => setSelectBloodTypeVisible(true)}>
             <S.BloodTypeLabel>Tipos sanguíneos</S.BloodTypeLabel>
             <AntDesign name="caretdown" size={icons.vsm} color={colors.text} />
           </S.BloodTypeSelect>
@@ -81,6 +94,16 @@ const CreatePost: React.FC = () => {
           placeholderTextColor={colors.darkText}
         />
       </S.Form>
+
+      <SelectBloodType
+        modalProps={{
+          transparent: true,
+          onRequestClose: () => setSelectBloodTypeVisible(false),
+          visible: selectBloodTypeVisible,
+          animationType: 'fade'
+         }}
+        bloodTypeSelected={bloodTypeSelected}
+        selectItem={handleSelectBloodType} />
     </S.Container>
   )
 }

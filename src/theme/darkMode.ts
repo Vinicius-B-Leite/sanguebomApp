@@ -28,7 +28,8 @@ export const darkMode = {
     },
     borderRadius: {
         full: width,
-        sm: width * 0.08
+        sm: width * 0.08,
+        xsm: width * 0.03
     },
     vw: width,
     vh: height
