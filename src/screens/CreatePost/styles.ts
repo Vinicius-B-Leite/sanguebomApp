@@ -41,10 +41,14 @@ export const Banner = styled.Image`
     width: 100%;
     height: 100%;
 `
+export const Form = styled.View`
+    padding: 5%;
+    flex: 1;
+`
 export const ROw = styled.View`
     flex-direction: row;
-    padding: 5%;
     justify-content: space-between;
+    margin: 3% 0%;
 `
 export const BloodTypeSelect = styled.TouchableOpacity`
     flex-direction: row;
@@ -81,9 +85,8 @@ export const Street = styled(NumberPlace)``
 export const Neightboard = styled(NumberPlace)``
 export const Description = styled.TextInput`
     background-color: ${({theme}) => theme.colors.formInputBg};
-    margin: 0% 5%;
-    width: 92%;
-    height: 25%;
+    width: 100%;
+    height: 55%;
     padding: 2%;
     color: ${({theme}) => theme.colors.text};
     font-size: ${({theme}) => theme.fontSize.xxsm}px;

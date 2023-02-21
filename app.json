@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "sanguebom",
+    "name": "Sangue Bom",
     "slug": "sanguebom",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -24,10 +24,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.viniciusbl21.sanguebom"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "816a6848-5ddf-415e-b413-7233a3b593a7"
+      }
     }
   }
 }
